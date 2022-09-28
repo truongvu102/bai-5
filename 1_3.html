@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>VU QUANG TRUONG</title>
+    <script>
+        
+    //    function timedRefresh(timeoutPeriod) {
+    //        setTimeout("location.reload(true);",timeoutPeriod);
+    //    }
+        
+    //      window.onload = timedRefresh(5000);
+        
+        //   -->
+        </script>
+</head>
+<body >
+    <div class="bg-image" 
+    style="background-image: url('bando.png');
+           height: 100vh">
+        <h1 class="text-white bg-primary text-center"> VŨ QUANG TRƯỜNG-B19DCDT250</h1>
+        <div class="row " style="line-height: 40px" >
+            <span class="align-text-top  ">.</span>
+            
+            <div class="col p-3 rounded-pill text-black" id="anhsang" >
+                <h1>ÁNH SÁNG</h1>
+                <h2 id="n10" ></h2>
+                
+                <script>
+                   
+                   var x=Math.floor(Math.random()*100)+1;
+                       document.getElementById('n10').innerHTML=x;
+                       if(x>45){
+                          document.getElementById('anhsang').style.backgroundColor="rgb(230, 230, 0)";
+                          //window.alert('CẢNH BÁO:ánh sáng quá cao');
+
+                        }
+                        else if(35<x<45){
+                          document.getElementById('anhsang').style.backgroundColor="rgb(255, 255, 51)";
+                          //window.alert('CẢNH BÁO:ánh sáng quá thấp');
+                       }
+                        else if(25<x<35){
+                          document.getElementById('anhsang').style.backgroundColor="rgb(255, 255, 102)";
+                          //window.alert('CẢNH BÁO:ánh sáng quá thấp');
+                       }
+                        else if(15<x<25){
+                          document.getElementById('anhsang').style.backgroundColor="rgb(255, 255, 153)";
+                          //window.alert('CẢNH BÁO:ánh sáng quá thấp');
+                       }
+                       else if(5<x<15){
+                          document.getElementById('anhsang').style.backgroundColor="rgb(255, 255, 179)";
+                          //window.alert('CẢNH BÁO:ánh sáng quá thấp');
+                       }
+                       
+                       else{
+                          document.getElementById('anhsang').style.backgroundColor="rgb(255, 255, 230)";
+                       }
+                    
+                    </script>
+            </div>
+ 
+
+             <div class="col p-3 rounded-pill text-black" id="nhietdo">
+                <h1>NHIỆT ĐỘ</h1>
+                <h2 id="n11"></h2>
+                
+                <script>
+                   
+                   var x=Math.floor(Math.random()*100)+1;
+                       document.getElementById('n11').innerHTML=x;
+                       if(x>45){
+                          document.getElementById('nhietdo').style.backgroundColor="rgb(204, 51, 0)";
+                          //window.alert('CẢNH BÁO:nhiệt độ quá cao');
+                    
+                       }else if(x<15){
+                          document.getElementById('nhietdo').style.backgroundColor="rgb(255, 121, 77)";
+                          //window.alert('CẢNH BÁO:nhiệt độ quá thấp');
+                       }
+                       
+                       else{
+                          document.getElementById('nhietdo').style.backgroundColor="rgb(255, 198, 179)";
+                       }
+                    
+                    </script>
+            </div>
+
+
+
+            <div class="col p-3 rounded-pill text-black" id="doam">
+                <h1>ĐỘ ẨM</h1>
+                <h2 id="n12"></h2>
+                
+                <script>
+                   
+                   var x=Math.floor(Math.random()*100)+1;
+                       document.getElementById('n12').innerHTML=x;
+                       if(x>45){
+                          document.getElementById('doam').style.backgroundColor="rgb(0, 92, 153)";
+                          //window.alert('CẢNH BÁO:độ ẩm quá cao');
+                    
+                       }else if(x<15){
+                          document.getElementById('doam').style.backgroundColor="rgb(128, 204, 255)";
+                          //window.alert('CẢNH BÁO:độ ẩm quá thấp');
+                       }
+                       
+                       else{
+                          document.getElementById('doam').style.backgroundColor="rgb(230, 245, 255)";
+                       }
+                    
+                    </script>
+            </div>
+        
+        </div>
+          <div class="row" style="line-height: 80px">
+            <span class="align-text-top">.</span>
+            
+            <div class="col-3 p-3  text-white text-center ">
+                <h1><span class="badge rounded-pill bg-primary" id="nutnhan">
+                    BUTTON 1
+                    <button type="button" class="btn btn-success"onclick="aon()">ON</button>
+                    <button type="button" class="btn btn-danger"onclick="aof()">OFF</button>
+                </span></h1>
+                <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:300px; height:500px">
+
+                <script>
+                  function aon(){
+                    document.getElementById("myImage").src= "https://www.w3schools.com/js/pic_bulbon.gif"
+                      if(confirm("bạn có muốn bật")==true){
+                      document.getElementById('nutnhan').style.backgroundColor="yellow"}
+                     
+                  }
+                  function aof(){
+                    document.getElementById("myImage").src= "https://www.w3schools.com/js/pic_bulboff.gif"
+                      if(confirm("bạn có muốn tắt")==true){
+                      document.getElementById('nutnhan').style.backgroundColor="yellow"}
+                  }
+                  function bon(){
+                    document.getElementById("myImage1").src= "https://www.w3schools.com/js/pic_bulbon.gif"
+                      if(confirm("bạn có muốn bật ")==true){
+                      document.getElementById('nutnhan1').style.backgroundColor="yellow"}
+                  }
+                  function bof(){
+                    document.getElementById("myImage1").src= "https://www.w3schools.com/js/pic_bulboff.gif"
+                      if(confirm("bạn có muốn tắt")==true){
+                      document.getElementById('nutnhan1').style.backgroundColor="yellow"}
+                  }
+                 </script>
+            </div>
+            <div class="col-3 p-3  text-white text-center">
+                <h1><span class="badge rounded-pill bg-primary" id="nutnhan1">
+                    BUTTON 2
+                    <button type="button" class="btn btn-success"onclick="bon()">ON</button>
+                    <button type="button" class="btn btn-danger"onclick="bof()">OFF</button>
+                </span></h1>
+                <img id="myImage1" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:300px; height:500px">
+            </div>
+            <div class="col-6 p-3 bg-image " style="height:1000px">
+               <script src="https://code.highcharts.com/highcharts.js"></script>
+               <script src="https://code.highcharts.com/modules/series-label.js"></script>
+               <script src="https://code.highcharts.com/modules/exporting.js"></script>
+               <script src="https://code.highcharts.com/modules/export-data.js"></script>
+               <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+               
+               <figure class="highcharts-figure">
+                   <div id="container"></div>
+                   <p class="highcharts-description">
+                      
+                   </p>
+               </figure>
+            </div>
+            <script>
+               Highcharts.chart('container', {
+           
+           title: {
+             text: 'Biểu đồ nhiệt độ - độ ẩm - ánh sáng'
+           },
+           
+           subtitle: {
+             text: 'Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>'
+           },
+           
+           yAxis: {
+             title: {
+               text: 'giá trị'
+             }
+           },
+           
+           xAxis: {
+             accessibility: {
+               rangeDescription: 'Range: 1 to 10'
+             }
+           },
+           
+           legend: {
+             layout: 'vertical',
+             align: 'right',
+             verticalAlign: 'middle'
+           },
+           
+           plotOptions: {
+             series: {
+               label: {
+                 connectorAllowed: false
+               },
+               pointStart: 1
+             }
+           },
+           
+           series: [{
+             name: 'nhiệt độ',
+             data: [43934, 48656, 65165, 81827, 112143, 142383,
+               171533, 165174, 155157, 161454, 154610]
+           }, {
+             name: 'độ ẩm',
+             data: [24916, 37941, 29742, 29851, 32490, 30282,
+               38121, 36885, 33726, 34243, 31050]
+           }, {
+             name: 'ánh sáng',
+             data: [11744, 30000, 16005, 19771, 20185, 24377,
+               32147, 30912, 29243, 29213, 25663]
+           },  ],
+           
+           responsive: {
+             rules: [{
+               condition: {
+                 maxWidth: 600
+               },
+               chartOptions: {
+                 legend: {
+                   layout: 'horizontal',
+                   align: 'center',
+                   verticalAlign: 'bottom'
+                 }
+               }
+             }]
+           }
+           
+           });
+           </script>
+          </div>
+
+    
+    </div>
+ 
+</body>
+</html>
